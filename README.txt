@@ -1,0 +1,1 @@
+Aplicación visual desarrollada en Python con la librería p5, que genera figuras geométricas (cuadrados y elipses) animadas en pantalla. Implementa principios de Programación Orientada a Objetos mediante clases como Figura, Ventana y el patrón de diseño Builder, permitiendo crear y configurar figuras de forma modular y escalable.
