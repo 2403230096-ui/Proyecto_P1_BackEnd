@@ -61,3 +61,6 @@ class Builder:
             return Cuadrado(**variable)
         else:
             return Elipse(**variable)
+
+class CuadradoBuilder(Builder):
+    ...

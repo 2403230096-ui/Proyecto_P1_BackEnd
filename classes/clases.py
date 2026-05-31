@@ -83,38 +83,38 @@ class Figura:
 
         # Etiqueta de los parametros
     def __str__ (self):
-            return f"""
-            Borde: {self.borde}
-            Dimension: {self.dimension}
-            Posicion: {self.posicion}
-            Color relleno: {self.color_relleno}
-            Velocidad: {self.velocidad}
-            """
+        return f"""
+        Borde: {self.borde}
+        Dimension: {self.dimension}
+        Posicion: {self.posicion}
+        Color relleno: {self.color_relleno}
+        Velocidad: {self.velocidad}
+        """
         
         # Esto utiliza los parametros dentro de figura para dibujar el objeto
     def dibujar(self):
         # Realiza el groseo del borde
-            stroke_weight(self.borde.grosor)
+        stroke_weight(self.borde.grosor)
 
-            # Selecciona el color del borde
-            stroke(self.borde.color)
+        # Selecciona el color del borde
+        stroke(self.borde.color)
 
-            # Selecciona el color de relleno para la figura 
-            fill(self.color_relleno)
+        # Selecciona el color de relleno para la figura 
+        fill(self.color_relleno)
 
-            # Dibuja la figura dentro de las coordenadas y el tamaño presentado dentro de los parametros
-            rect(self.posicion.coor_x, self.posicion.coor_y,
+        # Dibuja la figura dentro de las coordenadas y el tamaño presentado dentro de los parametros
+        rect(self.posicion.coor_x, self.posicion.coor_y,
             self.dimension.width, self.dimension.height)
 
         # Movemos lo posicion del objeto y hacemos la colision con limites de la ventana
     def desplazar_rebotar(self, max_x: int = 600, max_y: int = 600):
-            self.posicion.coor_x += self.velocidad.vel_x
-            self.posicion.coor_y += self.velocidad.vel_y
+        self.posicion.coor_x += self.velocidad.vel_x
+        self.posicion.coor_y += self.velocidad.vel_y
 
-            if self.posicion.coor_x <= 0 or self.posicion.coor_x + self.dimension.width >= max_x:
-                self.velocidad.vel_x *= -1
-            if self.posicion.coor_y <= 0 or self.posicion.coor_y + self.dimension.height >= max_y:
-                self.velocidad.vel_y *= -1
+        if self.posicion.coor_x <= 0 or self.posicion.coor_x + self.dimension.width >= max_x:
+            self.velocidad.vel_x *= -1
+        if self.posicion.coor_y <= 0 or self.posicion.coor_y + self.dimension.height >= max_y:
+              self.velocidad.vel_y *= -1
         
 
 class Cuadrado(Figura):
