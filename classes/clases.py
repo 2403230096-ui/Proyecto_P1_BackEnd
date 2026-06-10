@@ -40,7 +40,7 @@ class Velocidad:
         return f"Velocidad en X = {self.vel_x}, Velocidad en Y = {self.vel_y}"
 
 # Molde para el tamaño de ventana
-class Ventana:
+class Pantalla:
     def __init__(self, window_width:int = 600, window_height:int = 600):
         self.window_width = window_width
         self.window_height = window_height
@@ -59,7 +59,7 @@ class Figura:
     def __init__(self,
                 borde_grosor,
                 borde_color,
-                widht,
+                width,
                 height,
                 x,
                 y,
@@ -76,7 +76,7 @@ class Figura:
             self.borde = borde
 
         # Esto permite guardar los datos de las figuras dentro de los parametros adecuados
-        self.dimension = Dimension(widht, height)
+        self.dimension = Dimension(width, height)
         self.posicion = Posicion(x,y)
         self.color_relleno = relleno
         self.velocidad = Velocidad(vel_x, vel_y)
